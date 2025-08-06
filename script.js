@@ -2,7 +2,7 @@ const counter = document.getElementById("counter");
 
 async function updateCount() {
   try {
-    const res = await fetch("http://localhost:3000/count");
+    const res = await fetch("https://procrastinator007.github.io/testvul.github.io/count");
     const data = await res.json();
     counter.textContent = data.count;
   } catch (err) {
@@ -12,7 +12,7 @@ async function updateCount() {
 
 async function manualHit() {
   try {
-    await fetch("http://localhost:3000/hit");
+    await fetch("https://procrastinator007.github.io/testvul.github.io/hit");
     updateCount();
   } catch (err) {
     console.error("Error hitting endpoint:", err);
@@ -22,7 +22,7 @@ async function manualHit() {
 // 🔁 Reset count
 async function resetCount() {
   try {
-    const res = await fetch("http://localhost:3000/reset", {
+    const res = await fetch("https://procrastinator007.github.io/testvul.github.io/reset", {
       method: "POST"
     });
     const data = await res.json();
